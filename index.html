@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&display=swap" rel="stylesheet">
+    <link rel="icon" href="./icons/calculator.png">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <div class="calculator">
+        <div class="display">
+            <div class="calculation">
+                <span id="calculationText"></span>
+            </div>
+            <div class="result">
+                <span id="resultText">0</span>
+            </div>
+        </div>
+        <div class="keyboard">
+            <table>
+                <tr>
+                    <td><input class="btn operator" type="button" id="clear" value="C"></td>
+                    <td><input class="btn operator" type="button" id="back" value="<"></td>
+                    <td><input class="btn math" type="button" onclick="insert('/')" value="/"></td>
+                    <td><input class="btn math" type="button" onclick="insert('*')" value="X"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" onclick="insert('7')" value="7"></td>
+                    <td><input class="btn" type="button" onclick="insert('8')" value="8"></td>
+                    <td><input class="btn" type="button" onclick="insert('9')" value="9"></td>
+                    <td><input class="btn math" type="button" onclick="insert('-')" value="-"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" onclick="insert('4')" value="4"></td>
+                    <td><input class="btn" type="button" onclick="insert('5')" value="5"></td>
+                    <td><input class="btn" type="button" onclick="insert('6')" value="6"></td>
+                    <td><input class="btn math" type="button" onclick="insert('+')" value="+"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" type="button" onclick="insert('1')" value="1"></td>
+                    <td><input class="btn" type="button" onclick="insert('2')" value="2"></td>
+                    <td><input class="btn" type="button" onclick="insert('3')" value="3"></td>
+                    <td rowspan="2"><input style="height: 105px; border-radius: 0 0 10px 0;" class="btn operator" id="equal" type="button" value="="></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input style="width: 105px; border-radius: 0 0 0 10px;" class="btn" type="button" onclick="insert('0')" value="0"></td>
+                    <td><input class="btn" type="button" onclick="insert('.')" value="."></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>© Sayani Biswas, 2023</p>
+        <p><a href="https://github.com/sayanibiswas00"><img src="./icons/github.png"></a><a href="https://www.linkedin.com/in/sayani-biswas-4a07a316a/"><img src="./icons/linkedin.png"></a></p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
